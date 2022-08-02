@@ -17,7 +17,17 @@ $$
 where
 
 $$
-a_o=\frac{1}{\pi}(e^{2\pi}-1),\,\,a_n=\frac{e^{2\pi}-1}{\pi n^2+\pi},\,\, and\,\,b_n=\frac{n-ne^{2\pi}}{\pi n^2+\pi}
+a_o=\frac{1}{\pi}(e^{2\pi}-1)
+$$
+
+$$
+a_n=\frac{e^{2\pi}-1}{\pi n^2+\pi}
+$$
+
+and
+
+$$
+b_n=\frac{n-ne^{2\pi}}{\pi n^2+\pi}
 $$
 
 >## Derivations
@@ -25,11 +35,11 @@ $$
 >### Solving for $a_o$
 
 $$
-a_o = \frac{1}{\pi}\int_0^{2\pi} f(x)\,dx
+a_o = \frac{1}{\pi}\int_0^{2\pi} f(x)dx
 $$
 
 $$
-a_o = \frac{1}{\pi}\int_0^{2\pi} e^x\,dx
+a_o = \frac{1}{\pi}\int_0^{2\pi} e^xdx
 $$
 
 $$
@@ -47,39 +57,39 @@ $$
 >### Solving for $a_n$
 
 $$
-a_n = \frac{1}{\pi}\int_0^{2\pi} f(x)\cos nx\,dx
+a_n = \frac{1}{\pi}\int_0^{2\pi} f(x)\cos nxdx
 $$
 
 $$
-a_n = \frac{1}{\pi}\int_0^{2\pi} e^x\cos nx\,dx
-$$
-
-|let||
-|-|-|
-| $u=e^x$ | $du=e^x$ |
-| $dv=\cos nx\,dx$ | $v=\frac{1}{n}\sin nx$ |
-
-$$
-I = \frac{1}{\pi}\bigg(e^x \frac{1}{n}\sin nx-\frac{1}{n}\int_0^{2\pi}\sin nx\,\,e^x\,dx\bigg)
+a_n = \frac{1}{\pi}\int_0^{2\pi} e^x\cos nxdx
 $$
 
 |let||
 |-|-|
 | $u=e^x$ | $du=e^x$ |
-| $dv=\sin nx\,dx$ | $v=-\frac{1}{n}\cos nx$ |
+| $dv=\cos nxdx$ | $v=\frac{1}{n}\sin nx$ |
 
 $$
-I = \frac{1}{\pi}\bigg(e^x \frac{1}{n}\sin nx-\frac{1}{n}\bigg(e^x\frac{-1}{n}\cos nx-\int_0^{2\pi}\frac{-1}{n}\cos nx\,\,e^x\,dx\bigg)\bigg)
+I = \frac{1}{\pi}\bigg(e^x \frac{1}{n}\sin nx-\frac{1}{n}\int_0^{2\pi}\sin nxe^xdx\bigg)
+$$
+
+|let||
+|-|-|
+| $u=e^x$ | $du=e^x$ |
+| $dv=\sin nxdx$ | $v=-\frac{1}{n}\cos nx$ |
+
+$$
+I = \frac{1}{\pi}\bigg(e^x \frac{1}{n}\sin nx-\frac{1}{n}\bigg(e^x\frac{-1}{n}\cos nx-\int_0^{2\pi}\frac{-1}{n}\cos nxe^xdx\bigg)\bigg)
 $$
 
 $$
-I = \frac{1}{\pi n}e^x \sin nx+\frac{1}{\pi n^2}e^x\cos nx-\frac{1}{\pi n^2}\int_0^{2\pi}e^x\cos nx\,dx
+I = \frac{1}{\pi n}e^x \sin nx+\frac{1}{\pi n^2}e^x\cos nx-\frac{1}{\pi n^2}\int_0^{2\pi}e^x\cos nxdx
 $$
 
 but,
 
 $$
-I = \frac{1}{\pi}\int_0^{2\pi} e^x\cos nx\,dx
+I = \frac{1}{\pi}\int_0^{2\pi} e^x\cos nxdx
 $$
 
 then,
@@ -107,43 +117,43 @@ $$
 >### Solving for $b_n$
 
 $$
-b_n = \frac{1}{\pi}\int_0^{2\pi} f(x)\sin nx\,dx
+b_n = \frac{1}{\pi}\int_0^{2\pi} f(x)\sin nxdx
 $$
 
 $$
-b_n = \frac{1}{\pi}\int_0^{2\pi} e^x\sin nx\,dx
-$$
-
-|let||
-|-|-|
-| $u=e^x$ | $du=e^x$ |
-| $dv=\sin nx\,dx$ | $v=-\frac{1}{n}\cos nx$ |
-
-$$
-I = \frac{1}{\pi}\bigg(e^x\,\frac{-1}{n}\cos nx-\int_0^{2\pi}e^x\,\frac{-1}{n}\cos nx\,dx\bigg)
-$$
-
-$$
-I = \frac{1}{\pi}\bigg(-\frac{1}{n}e^x\cos nx+\frac{1}{n}\int_0^{2\pi}e^x\cos nx\,dx\bigg)
+b_n = \frac{1}{\pi}\int_0^{2\pi} e^x\sin nxdx
 $$
 
 |let||
 |-|-|
 | $u=e^x$ | $du=e^x$ |
-| $dv=\cos nx\,dx$ | $v=\frac{1}{n}\sin nx$ |
+| $dv=\sin nxdx$ | $v=-\frac{1}{n}\cos nx$ |
 
 $$
-I = \frac{1}{\pi}\bigg(-\frac{1}{n}e^x\cos nx+\frac{1}{n}\bigg(e^x\frac{1}{n}\sin nx - \int_0^{2\pi}\frac{1}{n}\sin nx\,\,e^x\,dx\bigg)\bigg)
+I = \frac{1}{\pi}\bigg(e^x\frac{-1}{n}\cos nx-\int_0^{2\pi}e^x\frac{-1}{n}\cos nxdx\bigg)
 $$
 
 $$
-I = -\frac{1}{\pi n}e^x\cos nx + \frac{1}{\pi n^2}e^x\sin nx-\frac{1}{\pi n^2}\int_0^{2\pi}e^x\sin nx\,dx
+I = \frac{1}{\pi}\bigg(-\frac{1}{n}e^x\cos nx+\frac{1}{n}\int_0^{2\pi}e^x\cos nxdx\bigg)
+$$
+
+|let||
+|-|-|
+| $u=e^x$ | $du=e^x$ |
+| $dv=\cos nxdx$ | $v=\frac{1}{n}\sin nx$ |
+
+$$
+I = \frac{1}{\pi}\bigg(-\frac{1}{n}e^x\cos nx+\frac{1}{n}\bigg(e^x\frac{1}{n}\sin nx - \int_0^{2\pi}\frac{1}{n}\sin nxe^xdx\bigg)\bigg)
+$$
+
+$$
+I = -\frac{1}{\pi n}e^x\cos nx + \frac{1}{\pi n^2}e^x\sin nx-\frac{1}{\pi n^2}\int_0^{2\pi}e^x\sin nxdx
 $$
 
 but,
 
 $$
-I = \frac{1}{\pi}\int_0^{2\pi} e^x\sin nx\,dx
+I = \frac{1}{\pi}\int_0^{2\pi} e^x\sin nxdx
 $$
 
 then,
