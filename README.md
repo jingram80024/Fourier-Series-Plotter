@@ -17,11 +17,11 @@ $$
 where
 
 $$
-a_o=\frac{1}{\pi}(e^{2\pi}-1)
+a_o=\frac{1}{\pi}(e^{2\pi}-1),
 $$
 
 $$
-a_n=\frac{e^{2\pi}-1}{\pi n^2+\pi}
+a_n=\frac{e^{2\pi}-1}{\pi n^2+\pi},
 $$
 
 and
