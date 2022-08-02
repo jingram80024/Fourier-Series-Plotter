@@ -30,6 +30,12 @@ $$
 b_n=\frac{n-ne^{2\pi}}{\pi n^2+\pi}
 $$
 
+>## Sample Plot
+
+Below is a sample plot created by the script for 1, 4, 7, and 100000 composite sinusoids.
+
+![figure 1](https://github.com/jingram80024/Fourier-Series-Plotter/blob/main/Figure_1.png)
+
 >## Derivations
 
 >### Solving for $a_o$
