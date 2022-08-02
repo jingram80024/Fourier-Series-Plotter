@@ -34,6 +34,8 @@ $$
 
 Below is a sample plot created by the script for 1, 4, 7, and 100000 composite sinusoids.
 
+With more composite sinusoids, the fourier series looks nearly identical to $f(x)=e^x$, repeating every $2\pi$.
+
 ![figure 1](https://github.com/jingram80024/Fourier-Series-Plotter/blob/main/Figure_1.png)
 
 >## Derivations
