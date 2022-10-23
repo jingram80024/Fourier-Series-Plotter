@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: black; color: white;">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>PyScript Fourier Plotter</title>
+
+        <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+        <script>
+            document.getElementsByTagName("py-config")[0].style.display = "none";
+            document.getElementsByTagName("py-script")[0].style.display = "none";
+        </script>
+        <py-config type="json">
+            {
+                "packages": ["numpy", "matplotlib"],
+                "paths": ["./FourierPlotter.py"]
+            }
+        </py-config>
+    </head>
+    <body>
+        <h1>Fourier Plot for a Repeating Exponential Function</h1>
+        <div id="user-input">
+            <h3 id="header">Parameters:</h3>
+            <label for="sinusoid-count">Number of composite sinusoids</label>
+            <input type="text" id="sinusoid-count" name="sinusoid-count" size="10" value="7" style="color: black;"><br>
+            <label for="x-axis-step-size">Number of plot points per cycle</label>
+            <input type="text" id="x-axis-step-size" name="x-axis-step-size" size="10" value="100" style="color: black;"><br>
+            <label for="selected-plots">Shown plots (separate by comma)</label>
+            <input type="text" id="selected-plots" name="selected-plots" size="10" value="0,3,7" style="color: black;"><br>
+            <input type="button" id="btn" value="Plot" style="color: black;"><br>
+        </div>
+        <h3>Plot:</h3>
+        <div id="mpl"></div>
+
+        <py-script src="./plotmanager.py"></py-script>
+        <script src="https://cdn.jsdelivr.net/gh/eligrey/FileSaver.js@5ed507ef8aa53d8ecfea96d96bc7214cd2476fd2/FileSaver.min.js"></script>
+    </body>
+</html>
