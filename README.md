@@ -1,4 +1,7 @@
 # Fourier-Series-Plotter
+
+## NOTE: Pyscript was very new at the time of writing and this likely won't work anymore :)
+
  Python module plots the fourier series of a repeating exponential function for any user defined number of composite sinusoids.
 
  Check out my GitHub Pages deployment to test this python function using pyscript:
